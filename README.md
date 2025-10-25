@@ -3,7 +3,7 @@
 End-to-end project using deep learning and offline reinforcement learning to optimize loan approvals on the LendingClub dataset (2007–2018).
 We (1) build a supervised default-risk model, (2) frame the problem as offline RL with approve/deny actions, and (3) compare policies with business-focused metrics.
 
-**What’s inside**
+>**What’s inside**
 
 Task 1 – EDA & Preprocessing: feature selection, cleaning, and a reusable preprocessor.joblib.
 
@@ -13,7 +13,7 @@ Task 3 – Offline RL: Conservative Q-Learning (CQL) learns an approve/deny poli
 
 Task 4 – Analysis & Comparison: DL threshold policy vs RL policy, OPE (on-support, IPS, DM, DR), slice analyses, and recommendations.
 
-**How to run**
+>**How to run**
 
 1) Task 1 — EDA & Preprocessing
 
@@ -42,7 +42,7 @@ Computes OPE: on-support, IPS (clipped), Direct Method, Doubly Robust.
 
 
 
-**Reward Design**
+>**Reward Design**
 
 Current reward:
 
@@ -65,7 +65,7 @@ Optionally include servicing costs, discounting, late fees
 Re-train CQL and re-run OPE after changing rewards to get business-comparable value.
 
 
-**Limitations & next steps**
+>**Limitations & next steps**
 
 Reward realism: incorporate term and recovery to align with P&L.
 
