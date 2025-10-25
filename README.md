@@ -46,35 +46,32 @@ Computes OPE: on-support, IPS (clipped), Direct Method, Doubly Robust.
 
 Current reward:
 
-Approve & Fully Paid: + loan_amount × interest_rate
+-Approve & Fully Paid: + loan_amount × interest_rate
 
-Approve & Default: − loan_amount
+-Approve & Default: − loan_amount
 
-Deny: 0
+-Deny: 0
 
-This asymmetric scale emphasizes downside risk; it is conservative by design.
+-This asymmetric scale emphasizes downside risk; it is conservative by design.
 
 For deployment-grade evaluation, refine to:
 
-Scale interest by term years (× term_months/12)
+-Scale interest by term years (× term_months/12)
 
-Add recovery rate on default (e.g., 40%)
+-Add recovery rate on default (e.g., 40%)
 
-Optionally include servicing costs, discounting, late fees
+-Optionally include servicing costs, discounting, late fees
 
-Re-train CQL and re-run OPE after changing rewards to get business-comparable value.
+-Re-train CQL and re-run OPE after changing rewards to get business-comparable value.
 
 
 >**Limitations & next steps**
 
-Reward realism: incorporate term and recovery to align with P&L.
+-Reward realism: incorporate term and recovery to align with P&L.
 
-Deny state coverage: rejected loans used placeholders; add richer deny-side features if available.
+-Deny state coverage: rejected loans used placeholders; add richer deny-side features if available.
 
-Add Fitted Q Evaluation (FQE) for stronger OPE beyond IPS/DM/DR.
+-Add Fitted Q Evaluation (FQE) for stronger OPE beyond IPS/DM/DR.
 
-Compare additional algorithms: IQL, TD3+BC, and VW (contextual bandits).
+-Compare additional algorithms: IQL, TD3+BC, and VW (contextual bandits).
 
-Exports slice tables and comparison results to analysis_artifacts/.
-
-Use these outputs to finalize reports/final_report.pdf.
